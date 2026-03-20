@@ -7,7 +7,7 @@ export interface WaitingListEntry {
   created_at: string;
 }
 
-const API_BASE_URL = '/api/v1/waiting-list';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/v1/waiting-list';
 
 export class WaitingListService {
   static async getGeneralList(): Promise<WaitingListEntry[]> {
